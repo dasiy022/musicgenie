@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from django.views.generic import TemplateView, listView, CreateView, UpdateView, 
-from music_app.models import Artist, Song
-from music_app.forms import ArtistForm, SongForm
+from django.views.generic import TemplateView, ListView, CreateView, UpdateView
+from musicapp.models import Artist, Song
+from musicapp.forms import ArtistForm, SongForm
 from django.urls import reverse_lazy
 
 

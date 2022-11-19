@@ -6,7 +6,7 @@ from crispy_forms.helper import FormHelper
 class ArtistForm(forms.ModelForm):
     class Meta:
         model = Artist
-        fields= ('name', 'age', 'nationality', 'website', 'height', 'label', 'image_url')
+        fields= "__all__"
 
         def _init_(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
@@ -16,7 +16,7 @@ class ArtistForm(forms.ModelForm):
 class SongForm(forms.ModelForm):
     class Meta:
         model = Song
-        fields=('title', 'genre', 'release_date', 'artist')
+        fields= "__all__"
 
         def _init_(self, *args, **kwargs):
             super().__init__ (*args, **kwargs)

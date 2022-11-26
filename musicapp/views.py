@@ -46,3 +46,10 @@ class SongUpdateView(UpdateView):
   form_class = ArtistForm
   template_name = 'edit_artist.html'
   success_url = reverse_lazy('artists')
+
+
+class SongListView(ListView):
+  model= Song
+  context_object_name= 'songs'
+  template_name= 'list_song.html'
+    

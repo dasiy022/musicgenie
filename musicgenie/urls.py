@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from musicapp.views import ArtistListView,LandingPageView, ArtistCreateView, ArtistUpdateView, deleteArtist, ArtistCreateSongView,SongUpdateView
+from musicapp.views import ArtistListView,LandingPageView, ArtistCreateView, ArtistUpdateView, deleteArtist, ArtistCreateSongView,SongUpdateView, SongListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,4 +13,5 @@ urlpatterns = [
     path('add_song', ArtistCreateSongView.as_view(),name='add_song'),
     path('edit_artist',ArtistUpdateView.as_view(),name='edit_artist'),
     path('edit_song', SongUpdateView.as_view(),name='edit_song'),
+    path('songs', SongListView.as_view(),name='songs')  
 ]
